@@ -1,5 +1,6 @@
 .trans-card{
     background-color: #4a82eb;
+    color: #0c1644;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     cursor: pointer;
     transition: all 0.6s;
