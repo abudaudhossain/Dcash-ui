@@ -1,8 +1,11 @@
 import React from "react";
+import TransactionOperation from "../../components/Transaction/TransactionOperation/TransactionOperation";
 
-const Transaction = ({ transaction }) => {
+const Transaction = ({ transaction = "new" }) => {
     return (
-        <h1>{transaction}</h1>
+        <>
+            <TransactionOperation />
+        </>
     );
 }
 

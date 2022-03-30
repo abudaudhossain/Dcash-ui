@@ -1,17 +1,21 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import Banner from "../../components/Home/Banner/Banner";
+import CountryCurrencyRate from "../../components/Home/CountryCurrencyRate/CountryCurrencyRate";
+import MyTransactions from "../../components/Shared/MyTransactions/MyTransactions";
 
+import './home.css'
 
 function Home() {
-    const a = 1;
-    const b = 3;
+
     return (
-        <>
-            <Container className="H-100">
-                <Banner />
+        <section className="">
+            <Banner />
+            <Container className="trans p-5">
+                <MyTransactions></MyTransactions>
             </Container>
-        </>
+            <CountryCurrencyRate />
+        </section>
     );
 }
 

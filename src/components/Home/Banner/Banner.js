@@ -2,12 +2,13 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import MyTransactions from "../../Shared/MyTransactions/MyTransactions";
 
+import "./banner.css"
+
 const Banner = () => {
 
     return (
-        <Container className="p-5">
-            <MyTransactions />
-        </Container>
+        <section className="banner">
+        </section>
     );
 }
 

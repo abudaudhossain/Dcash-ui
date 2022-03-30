@@ -3,7 +3,7 @@ import "./myTransaction.css"
 
 const MyTransaction = ({ transaction }) => {
     return (
-        <div className="trans-card p-5 text-center">
+        <div className="trans-card p-5 m-2 text-center">
             <h3>{transaction}</h3>
         </div>
     );
