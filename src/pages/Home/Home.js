@@ -1,5 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import Banner from "../../components/Home/Banner/Banner";
 
 
 function Home() {
@@ -7,9 +8,8 @@ function Home() {
     const b = 3;
     return (
         <>
-            <Container className="h-100">
-
-                <h1>Home{a + b}</h1>
+            <Container className="H-100">
+                <Banner />
             </Container>
         </>
     );

@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Home from './pages/Home/Home';
 import NavBar from './components/Navbar/NavBar'
@@ -10,7 +9,7 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
 
-    <div className="App">
+    <div >
       <BrowserRouter>
         <NavBar></NavBar>
         <Routes>
@@ -18,8 +17,8 @@ function App() {
           <Route path="/transaction" element={<Transaction />} />
           <Route path="account" element={<Account />} />
         </Routes>
-        <Footer></Footer>
       </BrowserRouter>
+      <Footer></Footer>
     </div>
   );
 }
