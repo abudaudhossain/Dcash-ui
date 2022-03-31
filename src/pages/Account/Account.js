@@ -1,8 +1,11 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
 const Account = () => {
     return (
-        <h1>account</h1>
+        <section>
+            <Outlet/>
+        </section>
     );
 }
 
