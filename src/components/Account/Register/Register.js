@@ -4,7 +4,27 @@ import { useForm } from "react-hook-form";
 const Register = () => {
 
     const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        if (data.agreement) {
+            fetch('http://localhost:8000/api/newAccount', {
+                method: "post",
+                body: JSON.stringify(data),
+                headers: {
+                    "content-type": "application/json"
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if(data.type === 'error') alert(`sorry try again  ${data.message}`)
+                    else {
+                        localStorage.setItem("AccountInfo", JSON.stringify(data.data[0]))
+                        localStorage.setItem("AccountNo", data.data[0].AccountNo);
+                        localStorage.setItem("numberValidation", data.data[0].numberValidation);
+                        localStorage.setItem("phone", data.data[0].phone)
+                    }
+                });
+        }
+    };
     return (
         <section className="container w-50 mt-5">
             <form onSubmit={handleSubmit(onSubmit)}>

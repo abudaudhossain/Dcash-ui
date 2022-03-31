@@ -9,8 +9,10 @@ import MyTransactions from './components/Shared/MyTransactions/MyTransactions';
 import Register from './components/Account/Register/Register';
 import Profile from './components/Account/Profile/Profile';
 import Login from './components/Account/Login/Login';
+import PhoneValidation from './components/Account/PhoneValidation/PhoneValidation';
 
 function App() {
+  
   return (
 
     <div >
@@ -26,6 +28,7 @@ function App() {
             <Route path='/account' element={<Profile />} />
             <Route path='/account/newAccount' element={< Register />} />
             <Route path='/account/login' element={<Login />} />
+            <Route path='/account/phoneValidation' element={<PhoneValidation />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -7,6 +7,10 @@ import CountryCurrencyRate from "../../components/Home/CountryCurrencyRate/Count
 import './home.css'
 
 function Home() {
+    const deviceToken = localStorage.getItem("deviceToken");
+    if (!deviceToken) {
+        localStorage.setItem("deviceToken", "DCash1234576")
+    }
 
     return (
         <section className="">
